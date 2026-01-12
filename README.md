@@ -1,53 +1,88 @@
-🏋️ FitClub - Platformă Management Fitness (Cyber-Theme)
+# 🏋️ FitClub – Platformă Management Fitness  
+### ⚡ Cyber / Dark Mode Web Application
 
-FitClub este o aplicație web completă dezvoltată în PHP și MySQL, concepută pentru a gestiona activitatea unei săli de fitness moderne. Proiectul pune accent pe o experiență de utilizator fluidă (UX), securitate și raportare avansată, totul integrat într-un design futuristic .
+**FitClub** este o aplicație web completă pentru managementul unei săli de fitness moderne, dezvoltată în **PHP & MySQL**, cu accent pe **securitate**, **UX fluid** și **raportare eficientă**.  
+Proiectul utilizează un design **futuristic (Cyber / Dark Mode)** și o arhitectură clară, potrivită pentru aplicații reale.
 
-🚀 Funcționalități Principale 
+---
 
-Proiectul a fost dezvoltat respectând următoarele cerințe:
+## 🚀 Funcționalități Principale
 
-Arhitectură: Utilizarea PHP pentru logica de server și MySQL pentru stocarea datelor.
+✔️ **Arhitectură Robustă**  
+- Backend dezvoltat în PHP 8.x  
+- Bază de date relațională MySQL  
 
-Operații CRUD Complete: Adăugarea, citirea și ștergerea datelor (rezervări, membri).
+✔️ **Operații CRUD Complete**  
+- Gestionare membri  
+- Clase & antrenamente  
+- Rezervări  
 
-Sistem de Autentificare: Pagini de Login și Register securizate cu hashing pentru parole și gestionare de sesiuni.
+✔️ **Sistem de Autentificare & Securitate**  
+- Login & Register  
+- Hashing parole (`password_hash`)  
+- Management sesiuni & Logout securizat  
 
-Roluri Utilizatori: Categorii multiple (Administrator, Antrenor, Membru).
+✔️ **Roluri Utilizatori**  
+- 🛡️ Administrator  
+- 🏋️ Antrenor  
+- 👤 Membru  
+- Permisiuni și interfețe diferite pentru fiecare rol  
 
-Navigație Dinamică: Interfață fluidă cu legături logice între profil, orar și panouri de control.
+✔️ **Navigație Dinamică**  
+- Dashboard personalizat  
+- Profil utilizator  
+- Orar și management activități  
 
-Comunicare SMTP: Formular de contact funcțional integrat cu servere de mail pentru transmitere mesaje.
+✔️ **Comunicare SMTP**  
+- Formular de contact funcțional  
+- Trimitere email în timp real  
 
-Securitatea Sesiunii: Managementul sesiunilor și terminarea sigură a acestora (Logout).
+✔️ **Design Responsive**  
+- Desktop, Tabletă, Smartphone  
 
-🛠️ Tehnologii Utilizate
+---
 
-Backend: PHP 8.x (PDO pentru conexiuni SQL sigure)
+## 🛠️ Tehnologii Utilizate
 
-Baza de date: MySQL
+### 🔧 Backend
+- **PHP 8.x**
+- **PDO** pentru conexiuni sigure la baza de date
+- Protecție împotriva **SQL Injection**
 
-Frontend: HTML5, CSS3 (Custom Variables, Flexbox, Grid)
+### 🗄️ Bază de Date
+- **MySQL**
+- Structură relațională optimizată
 
-🔧 Instalare și Configurare
+### 🎨 Frontend
+- **HTML5**
+- **CSS3**
+  - CSS Custom Variables (temă Cyber/Dark)
+  - Flexbox & Grid
+  - Design responsive
 
-Clonează repository-ul:
+---
 
-git clone [https://github.com/utilizator/fitclub.git](https://github.com/utilizator/fitclub.git)
+## 🔐 Securitate
 
+- Hashing parole (`password_hash`, `password_verify`)
+- Sesiuni PHP securizate
+- Separare logică între roluri
+- Protecție SQL Injection (PDO + prepared statements)
 
-Importă baza de date:
+---
 
-Creează o bază de date nouă în MySQL (ex: fitclub_db).
+## 📱 Design Responsiv
 
-Importă fișierul .sql furnizat în directorul database/.
+| Dispozitiv | Experiență |
+|-----------|-----------|
+| 🖥️ Desktop | Dashboard complet, tabele avansate |
+| 📱 Tabletă | Layout adaptiv |
+| 📲 Mobil | Meniu vertical, elemente touch-friendly |
 
-Configurează conexiunea:
+---
 
-Editează fișierul config.php cu datele serverului tău local (host, user, pass, dbname).
+## 🔧 Instalare și Configurare
 
-Accesare:
-
-Deschide în browser http://localhost/fitclub.
-
-
-Proiect realizat pentru evaluarea competențelor de programare Web (PHP/SQL).
+### 1️⃣ Clonează repository-ul
+```bash
+git clone https://github.com/utilizator/fitclub.git
