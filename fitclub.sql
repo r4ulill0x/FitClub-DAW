@@ -3,7 +3,7 @@
 -- Include: Utilizatori, Abonamente, Clase, Rezervări, Statistici și Contact
 -- ===================================================
 
-USE asasssmr_gym;
+USE your_db;
 
 -- 1. TABELA ABONAMENTE
 CREATE TABLE IF NOT EXISTS Abonamente (
