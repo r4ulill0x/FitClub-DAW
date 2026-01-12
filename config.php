@@ -6,16 +6,16 @@ if (session_status() === PHP_SESSION_NONE) {
 
 // Setari basic baza de date
 define('DB_HOST', 'localhost');    
-define('DB_NAME', 'asasssmr_gym'); 
-define('DB_USER', 'asasssmr_sas');         
-define('DB_PASS', 'RKzvKT4Q8CBCTudwQDa2');
+define('DB_NAME', 'nume_baza_date'); 
+define('DB_USER', 'utilizator_db');         
+define('DB_PASS', '');
 
 // Date mail 
-define('SMTP_HOST', 'mail.asas.daw.ssmr.ro');
-define('SMTP_USER', 'contact@asas.daw.ssmr.ro');
-define('SMTP_PASS', 'admin123'); 
+define('SMTP_HOST', 'smtp.exemplu.com');
+define('SMTP_USER', 'email@exemplu.ro');
+define('SMTP_PASS', 'parola_mail_aici'); 
 define('SMTP_PORT', 587);        
-define('SMTP_FROM', 'contact@asas.daw.ssmr.ro');
+define('SMTP_FROM', 'noreply@exemplu.ro');
 define('SMTP_FROM_NAME', 'FitClub Security');
 
 // Creare DSN (Data Source Name)
