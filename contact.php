@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $subiect = trim($_POST['subiect']);
     $mesaj_corp = trim($_POST['mesaj']);
 
-    $user_email = isset($_SESSION['user_email']) ? $_SESSION['user_email'] : 'formular-contact@asas.daw.ssmr.ro';
+    $user_email = isset($_SESSION['user_email']) ? $_SESSION['user_email'] : 'smtp.exemplu.com';
 
     if (!empty($nume) && !empty($mesaj_corp)) {
         
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $mail->setFrom(SMTP_USER, 'FitClub Formular');
             
-            $mail->addAddress('asasssmr@asas.daw.ssmr.ro'); 
+            $mail->addAddress('smtp.exemplu.com'); 
             
             $mail->isHTML(true);
             $mail->Subject = "Mesaj Nou FitClub: " . $subiect;
