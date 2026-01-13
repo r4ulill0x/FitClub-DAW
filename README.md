@@ -26,7 +26,7 @@ Proiectul utilizează un design **futuristic (Cyber / Dark Mode)** și o arhitec
 - 🛡️ Administrator  
 - 🏋️ Antrenor  
 - 👤 Membru  
-- Permisiuni și interfețe diferite pentru fiecare rol  
+- Permisiuni și interfețe diferite 
 
 ✔️ **Navigație Dinamică**  
 - Dashboard personalizat  
@@ -36,9 +36,6 @@ Proiectul utilizează un design **futuristic (Cyber / Dark Mode)** și o arhitec
 ✔️ **Comunicare SMTP**  
 - Formular de contact funcțional  
 - Trimitere email în timp real  
-
-✔️ **Design Responsive**  
-- Desktop, Tabletă, Smartphone  
 
 ---
 
@@ -56,9 +53,6 @@ Proiectul utilizează un design **futuristic (Cyber / Dark Mode)** și o arhitec
 ### 🎨 Frontend
 - **HTML5**
 - **CSS3**
-  - CSS Custom Variables (temă Cyber/Dark)
-  - Flexbox & Grid
-  - Design responsive
 
 ---
 
@@ -68,16 +62,6 @@ Proiectul utilizează un design **futuristic (Cyber / Dark Mode)** și o arhitec
 - Sesiuni PHP securizate
 - Separare logică între roluri
 - Protecție SQL Injection (PDO + prepared statements)
-
----
-
-## 📱 Design Responsiv
-
-| Dispozitiv | Experiență |
-|-----------|-----------|
-| 🖥️ Desktop | Dashboard complet, tabele avansate |
-| 📱 Tabletă | Layout adaptiv |
-| 📲 Mobil | Meniu vertical, elemente touch-friendly |
 
 ---
 
