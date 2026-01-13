@@ -19,7 +19,7 @@ $mesaj = '';
 // Adaugare/modificare clase
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nume_clasa = trim($_POST['nume_clasa']);
-    $descriere = trim($_POST['descriere']);D
+    $descriere = trim($_POST['descriere']);
     $id_antrenor = (!empty($_POST['id_antrenor'])) ? $_POST['id_antrenor'] : NULL;
     $id_hidden = $_POST['id'] ?? 0;
 
@@ -184,4 +184,5 @@ echo '<div style="margin-bottom: 20px;"><a href="profil.php">&larr; Înapoi la P
 
 <?php
 include 'footer.php';
+
 ?>
