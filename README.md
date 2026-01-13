@@ -1,5 +1,5 @@
 # 🏋️ FitClub – Platformă Management Fitness  
-### ⚡ Cyber / Dark Mode Web Application
+### ⚡ Aplicație Web - Prroiect DAW
 
 **FitClub** este o aplicație web completă pentru managementul unei săli de fitness moderne, dezvoltată în **PHP & MySQL**, cu accent pe **securitate**, **UX fluid** și **raportare eficientă**.  
 Proiectul utilizează un design **futuristic (Cyber / Dark Mode)** și o arhitectură clară, potrivită pentru aplicații reale.
