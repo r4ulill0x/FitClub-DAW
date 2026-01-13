@@ -1,6 +1,6 @@
 -- ===================================================
 -- SCRIPT COMPLET BAZĂ DE DATE FITCLUB
--- Include: Utilizatori, Abonamente, Clase, Rezervări, Statistici și Contact
+-- Include: Utilizatori, Abonamente, Clase, Rezervări și Contact
 -- ===================================================
 
 USE your_db;
