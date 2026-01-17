@@ -1,220 +1,285 @@
-/* --- Fonturi MODIFICATE (Alternative high-tech) --- */
-/* Orbitron: Font blocky, futuristic pentru titluri */
-/* Roboto Mono: Font monospaced curat pentru text */
+/* ==========================================================
+   1. CONFIGURARE, VARIABILE ČI CULORI (Cyber/Dark Theme)
+   ========================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap');
 
-/* --- Culori MODIFICATE (Mai puțin stridente) --- */
 :root {
-    --culoare-fundal: #0a0a1a;  /* Albastru-negru (Deep Space) */
-    --culoare-text: #e0e0e0;    /* Alb-gri deschis */
-    --accent-principal: #00aeff;  /* Albastru Electric (subtil) */
-    --accent-secundar: #a950f8; /* Violet (subtil) */
-    --culoare-dark-ui: rgba(255, 255, 255, 0.03); /* Fundal și mai transparent */
-    --culoare-eroare: #ff4d4d; /* Rosu pentru erori */
+    --culoare-fundal: #0a0a1a;
+    /* Fundal ĂŽnchis (Deep Space) */
+    --culoare-text: #e0e0e0;
+    /* Text alb-gri deschis */
+    --accent-principal: #00aeff;
+    /* Albastru Electric */
+    --accent-secundar: #a950f8;
+    /* Violet */
+    --culoare-dark-ui: rgba(255, 255, 255, 0.05);
+    --culoare-eroare: #ff4d4d;
+    --card-bg: #16162a;
+    /* Fundal carduri */
 }
 
-/* --- Resetare Globală și Fundal --- */
+/* Resetare completÄ */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html,
 body {
-    font-family: 'Roboto Mono', monospace;
-    background-color: var(--culoare-fundal);
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--culoare-fundal) !important;
     color: var(--culoare-text);
+    font-family: 'Roboto Mono', monospace;
     line-height: 1.6;
+    overflow-x: hidden !important;
+    /* Prevenim scroll-ul orizontal pe body */
 }
 
-/* --- Container Principal --- */
-main, header, footer {
+/* Containere adaptive */
+.container,
+main,
+header,
+footer {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
 }
 
-/* --- Header și Navigație --- */
+/* ==========================================================
+   2. HEADER ČI NAVIGAČIE
+   ========================================================== */
 header {
     border-bottom: 2px solid var(--accent-principal);
-    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 15px 0;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 header nav a {
-    font-family: 'Orbitron', sans-serif; /* Fontul NOU */
-    font-size: 1.15rem; /* Putin mai mic */
-    color: var(--culoare-text);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    color: var(--culoare-text) !important;
     text-decoration: none;
     text-transform: uppercase;
-    transition: all 0.3s ease;
-    padding: 5px 10px;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+    display: block;
+    text-align: center;
 }
 
 header nav a:hover {
-    color: var(--accent-principal);
+    color: var(--accent-principal) !important;
     text-shadow: 0 0 10px var(--accent-principal);
+    border-bottom: 1px solid var(--accent-principal);
 }
 
-/* --- Stil Titluri (Efect "glow" mai subtil) --- */
-h1, h2, h3, h4 {
-    font-family: 'Orbitron', sans-serif; /* Fontul NOU */
-    color: var(--accent-principal);
-    /* Efect "glow" mult mai subtil */
-    text-shadow: 0 0 8px rgba(0, 174, 255, 0.4);
-    margin-bottom: 15px;
-}
-
-/* --- Stil Link-uri Generale --- */
-a {
-    color: var(--accent-secundar);
+/* ==========================================================
+   3. BUTOANE (Fix: RezervÄ, Ănregistrare, Suprapuneri)
+   ========================================================== */
+.btn,
+button,
+input[type="submit"] {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
     text-decoration: none;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
     transition: all 0.3s ease;
+    background-color: var(--accent-principal);
+    color: var(--culoare-fundal) !important;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0, 174, 255, 0.2);
+    margin: 5px 0;
+    /* SpaČiere verticalÄ pentru a evita suprapunerea */
 }
 
-a:hover {
-    color: var(--culoare-text);
-    text-shadow: 0 0 8px var(--accent-secundar);
-    text-decoration: underline;
+.btn-block,
+form button,
+.auth-card .btn {
+    width: 100% !important;
+    margin-top: 10px;
 }
 
-/* --- Stil Formul_are (Cybersecurity) --- */
-form {
-    background-color: var(--culoare-dark-ui);
+/* Butonul de REZERVÄ din tabele */
+td a.btn,
+td button {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    margin: 2px 0;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover {
+    background-color: var(--culoare-text);
+    color: var(--accent-principal) !important;
+    box-shadow: 0 0 20px var(--accent-principal);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================
+   4. CARDURI ČI FORMULARE
+   ========================================================== */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+}
+
+.auth-card {
+    background: var(--card-bg);
     border: 1px solid var(--accent-secundar);
-    padding: 25px;
-    margin-top: 20px;
-    box-shadow: 0 0 15px rgba(169, 80, 248, 0.1); /* Glow și mai subtil */
-}
-
-form div {
-    margin-bottom: 20px;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
 form label {
     display: block;
-    font-family: 'Orbitron', sans-serif; /* Fontul NOU */
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
     color: var(--accent-principal);
+    margin-bottom: 8px;
+    margin-top: 15px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="time"],
+input,
 select,
 textarea {
     width: 100%;
     padding: 12px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     border: 1px solid var(--accent-secundar);
-    color: var(--culoare-text);
+    color: white;
+    border-radius: 4px;
     font-family: 'Roboto Mono', monospace;
     font-size: 1rem;
-    transition: all 0.3s ease;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    /* La focus, adăugăm un glow albastru */
-    outline: none;
-    border-color: var(--accent-principal);
-    box-shadow: 0 0 10px rgba(0, 174, 255, 0.5);
+/* ==========================================================
+   5. TABELE RESPONSIVE (Orar / Abonamente) - FIX VIZIBILITATE
+   ========================================================== */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    /* Permite scroll-ul orizontal */
+    -webkit-overflow-scrolling: touch;
+    /* Scroll fluid pe iOS */
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--accent-principal);
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
-/* --- Stil Butoane --- */
-button, input[type="submit"] {
-    background-color: var(--accent-principal);
-    color: var(--culoare-fundal);
-    font-family: 'Orbitron', sans-serif; /* Fontul NOU */
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 12px rgba(0, 174, 255, 0.3); /* Glow subtil */
-}
-
-button:hover {
-    background-color: var(--culoare-text);
-    color: var(--accent-principal);
-    box-shadow: 0 0 20px rgba(0, 174, 255, 0.6);
-}
-
-/* --- Stil Tabele (pentru Orar / Admin) --- */
 table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    border: 1px solid var(--accent-principal);
-    margin-bottom: 20px;
+    border-collapse: collapse;
+    min-width: 700px;
+    /* ForČÄm o lÄČime minimÄ pentru a nu ĂŽnghesui coloanele pe mobil */
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid var(--accent-principal);
-}
-
-th { /* Antetul tabelului */
-    font-family: 'Orbitron', sans-serif; /* Fontul NOU */
-    font-size: 1.1rem;
+th {
     background-color: var(--accent-principal);
     color: var(--culoare-fundal);
+    font-family: 'Orbitron', sans-serif;
+    padding: 12px;
     text-transform: uppercase;
+    font-size: 0.85rem;
 }
 
 td {
-    background-color: var(--culoare-dark-ui);
-}
-
-/* Link-uri speciale în tabel */
-td a {
-    color: var(--accent-principal);
-    font-weight: bold;
-}
-td a:hover {
-    color: var(--accent-secundar);
-}
-td a[style*="color:red;"] { /* Link-ul de anulare */
-    color: var(--culoare-eroare);
-}
-
-/* --- Mesaje de Eroare și Succes --- */
-p[style*="color:red;"] {
-    color: var(--culoare-eroare) !important;
-    font-weight: bold;
-    font-family: 'Orbitron', sans-serif;
-    background-color: rgba(255, 77, 77, 0.1);
-    padding: 10px;
-    border: 1px solid var(--culoare-eroare);
-}
-
-p[style*="color:green;"] {
-    color: var(--accent-principal) !important;
-    font-weight: bold;
-    font-family: 'Orbitron', sans-serif;
-    background-color: rgba(0, 174, 255, 0.1);
-    padding: 10px;
-    border: 1px solid var(--accent-principal);
-}
-
-/* --- Footer --- */
-footer {
-    border-top: 2px solid var(--accent-principal);
-    margin-top: 30px;
-    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid rgba(0, 174, 255, 0.1);
+    vertical-align: middle;
     font-size: 0.9rem;
-    color: #888;
+    /* Permitem textului lung sÄ se rupÄ pe mai multe rĂ˘nduri */
+    word-wrap: break-word;
+    max-width: 250px;
+}
+
+/* ==========================================================
+   6. MEDIA QUERIES
+   ========================================================== */
+
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    header nav li {
+        width: 100%;
+    }
+
+    header nav a {
+        width: 100%;
+        background: rgba(0, 174, 255, 0.05);
+        border: 1px solid rgba(0, 174, 255, 0.1);
+    }
+
+    .auth-card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    /* ForČÄm butoanele mari sÄ fie vizibile Či sÄ nu se suprapunÄ */
+    .btn,
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* IndicaČie vizualÄ cÄ tabelul se poate glisa */
+    .table-container::after {
+        content: "â GliseazÄ orizontal pentru mai multe detalii â";
+        display: block;
+        text-align: center;
+        font-size: 0.7rem;
+        color: var(--accent-principal);
+        padding: 5px;
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* AjustÄri fine pentru ecrane foarte mici */
+    td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    th {
+        padding: 8px;
+        font-size: 0.75rem;
+    }
 }
